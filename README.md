@@ -36,3 +36,10 @@ The repository's `index.html` is a visual prototype with demo data. It is not th
 ## Security and editorial notes
 
 AI output is saved as a draft for human review. Do not provide private customer data as model input. Verify product claims and sources before publishing. The plugin requires users with the WordPress `edit_posts` capability; publishing also checks the current user's `publish_post` capability for that post.
+
+
+## WordPress ZIP installation
+
+The repository includes a root plugin entry point so the GitHub repository ZIP can be uploaded from WordPress → Plugins → Add New → Upload Plugin. After activation, open **استودیو محتوا و سئو** under the existing VidiForm Blog menu (menu slug `vf-blog`); if it is absent, the plugin adds its own menu. Configure Tavily and the AI endpoint under **اتصال API**.
+
+For manual installation, keep the root `vidiform-content-studio.php` file and the `vidiform-content-studio/` implementation folder together in the same plugin directory under `wp-content/plugins/`.
