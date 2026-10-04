@@ -1,12 +1,4 @@
 <?php
-/**
- * Plugin Name: VidiForm Content Studio
- * Description: Keyword research, AI-assisted drafts, and editorial calendar in WordPress.
- * Version: 1.0.0
- * Requires at least: 6.0
- * Requires PHP: 7.4
- * Author: VidiForm
- */
 if (!defined('ABSPATH')) exit;
 final class VF_Content_Studio {
     private $table;
@@ -166,5 +158,4 @@ final class VF_Content_Studio {
     private function status($v){$m=array('researched'=>'تحقیق‌شده','planned'=>'در برنامه','draft'=>'پیش‌نویس','published'=>'منتشرشده');return $m[$v]??$v;}
     private function post_status($v){$m=array('draft'=>'پیش‌نویس','pending'=>'در انتظار بازبینی','future'=>'زمان‌بندی‌شده','publish'=>'منتشرشده');return $m[$v]??$v;}
 }
-register_activation_hook(__FILE__,array('VF_Content_Studio','activate'));
 new VF_Content_Studio();
